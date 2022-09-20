@@ -1,4 +1,9 @@
 # Demos for my videos
+Just check out the repository and run `npm i` followed by `npm start` in the this folder.
+
+Build with node 16.17
+
+Demos:
  - keys: React keys
 
 # Getting Started with Create React App
