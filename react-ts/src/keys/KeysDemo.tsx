@@ -69,6 +69,21 @@ function IndexKeys({
   );
 }
 
+function SameKeys({
+  values,
+}: KeysProps) {
+  return (
+    <div>
+      All Keys The Same:
+      <ul>
+        {/* this will behave like array index keys */}
+        {/* eslint-disable-next-line react/no-array-index-key */}
+        {values.map((value, idx) => <Component key={idx} value={value} />)}
+      </ul>
+    </div>
+  );
+}
+
 function RandomKeys({
   values,
 }: KeysProps) {
@@ -111,6 +126,7 @@ export default function KeysDemo() {
       >
         <ProperKeys values={values} />
         <NoKeys values={values} />
+        <SameKeys values={values} />
         <IndexKeys values={values} />
         <RandomKeys values={values} />
       </div>
