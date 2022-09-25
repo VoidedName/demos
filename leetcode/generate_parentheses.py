@@ -7,8 +7,6 @@
 # rules:
 #   S => B
 #   B => () <- apply at n == 0
-#   B => B()
-#   B => ()B
 #   B => (B)
 #   B => BB
 # start: S
@@ -16,8 +14,6 @@
 rules = [
     lambda nt: ["B"] if nt == "S" else None,
     lambda nt: ["B", "B"] if nt == "B" else None,
-    lambda nt: ["(", "B", ")"] if nt == "B" else None,
-    lambda nt: ["(", ")", "B"]if nt == "B" else None,
     lambda nt: ["B", "(", ")"] if nt == "B" else None,
 ]
 
