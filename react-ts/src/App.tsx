@@ -4,6 +4,7 @@ import {
   BrowserRouter, Link, Route, Routes,
 } from 'react-router-dom';
 import KeysDemo from './keys/KeysDemo';
+import { SuspenseShowCase } from './suspense/suspense';
 
 function Overview() {
   return (
@@ -12,6 +13,9 @@ function Overview() {
       <ul>
         <li>
           <Link to="/react-keys">React Keys</Link>
+        </li>
+        <li>
+          <Link to="/suspense">Suspense</Link>
         </li>
       </ul>
     </>
@@ -24,6 +28,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Overview />} />
         <Route path="/react-keys" element={<KeysDemo />} />
+        <Route path="/suspense" element={<SuspenseShowCase />} />
       </Routes>
     </BrowserRouter>
   );
